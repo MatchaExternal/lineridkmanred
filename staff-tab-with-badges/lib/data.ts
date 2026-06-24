@@ -289,7 +289,7 @@ export const communityArt: CommunityArt[] = [
   },
 ]
 
-export type StaffRole = "helpliner" | "moderator" | "developer" | "support"
+export type StaffRole = "helpliner" | "moderator" | "developer" | "support" | "Event Coordinator"
 
 export type StaffMember = {
   username: string
@@ -307,6 +307,16 @@ export type StaffMember = {
 
 // Roster of operators with backend clearance. "helpliner" is the top admin role.
 export const staff: StaffMember[] = [
+  {
+    username: "zukk",
+    role: "Event Coordinator",
+    clearance: "ADMIN // ROOT",
+    bio: "hes chill as freak - kazics",
+    active: true,
+    avatar: "/staff/earmuffs.png",
+    robloxId: 12946313,
+    accent: "oklch(0.72 0.07 240)", // light
+  },
   {
     username: "earmuffs",
     role: "helpliner",
