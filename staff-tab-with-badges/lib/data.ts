@@ -149,10 +149,11 @@ export const weapons: Weapon[] = [
     image: "/weapons/phoenix.png",
     tags: ["Explosive", "Projectile", "Two-handed"],
     specs: [
-      { label: "DAMAGE", value: "80 / direct-hit insta-kill" },
-      { label: "BULLET COST", value: "120H" },
-      { label: "DRAW TIME", value: "0.75s" },
-      { label: "HOLSTER TIME", value: "0.75s" },
+      { label: "EXPLOSION DAMAGE", value: "70" },
+      { label: "DIRECT DAMAGE", value: "140 / direct-hit insta-kill" },
+      { label: "BULLET COST", value: "180H" },
+      { label: "DRAW TIME", value: "0.8s" },
+      { label: "HOLSTER TIME", value: "0.8s" },
       { label: "MAGAZINE", value: "2 bullets" },
     ],
     notes: [
@@ -172,12 +173,12 @@ export const weapons: Weapon[] = [
     image: "/weapons/siege.png",
     tags: ["Spread", "Two-shot", "Two-handed"],
     specs: [
-      { label: "DAMAGE", value: "30–70 per shot" },
-      { label: "BULLET COST", value: "120" },
+      { label: "DAMAGE", value: "30–80 per shot" },
+      { label: "BULLET COST", value: "140" },
       { label: "DRAW TIME", value: "1.1s" },
       { label: "HOLSTER TIME", value: "0.6s" },
       { label: "MAGAZINE", value: "2 bullets" },
-      { label: "SHOT INTERVAL", value: "0.75s" },
+      { label: "SHOT INTERVAL", value: "0.8s" },
     ],
     notes: [
       "Creates close-range burst and recoil mix-up pressure; damage is strongest up close and falls off with distance.",
@@ -196,10 +197,10 @@ export const weapons: Weapon[] = [
     image: "/weapons/monarch.png",
     tags: ["Two-handed", "Scoped", "Long-range"],
     specs: [
-      { label: "DAMAGE", value: "[CLASSIFIED]" },
-      { label: "BULLET COST", value: "[CLASSIFIED]" },
-      { label: "DRAW TIME", value: "[CLASSIFIED]" },
-      { label: "MAGAZINE", value: "[CLASSIFIED]" },
+      { label: "DAMAGE", value: "140" },
+      { label: "BULLET COST", value: "200H" },
+      { label: "DRAW TIME", value: "1.85s" },
+      { label: "MAGAZINE", value: "1" },
     ],
     notes: [
       "A two-handed scoped rifle built for long-range engagements.",
