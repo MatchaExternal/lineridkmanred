@@ -44,6 +44,12 @@ const ROLES: Record<StaffRole, RoleConfig> = {
     icon: <LifeBuoy className="h-3 w-3" />,
     color: "var(--muted-foreground)",
   },
+  "Event Coordinator": {
+  label: "EVENT COORDINATOR",
+  tooltip: "Event Coordinator",
+  icon: <ShieldCheck className="h-3 w-3" />,
+  color: "oklch(0.72 0.11 300)", // purple
+},
 }
 
 function RoleBadge({ role }: { role: StaffRole }) {
