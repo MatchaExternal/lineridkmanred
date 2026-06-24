@@ -313,8 +313,8 @@ export const staff: StaffMember[] = [
     clearance: "ADMIN // ROOT",
     bio: "hes chill as freak - kazics",
     active: true,
-    avatar: "/staff/earmuffs.png",
-    robloxId: 12946313,
+    avatar: "/staff/zukk.png",
+    robloxId: 611823700,
     accent: "oklch(0.72 0.07 240)", // light
   },
   {
