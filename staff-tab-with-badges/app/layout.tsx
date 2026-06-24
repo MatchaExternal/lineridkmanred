@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: 'REDLINER // MERC.OS',
 
   description:
-    'REDLINER — Professional Mercenary Operations. Classified community terminal for the REDLINER tactical combat experience. Compete. Survive. Dominate.',
+    'MERC.OS | Mercenary Engagement & Reconnaissance Command Operating System',
 
   generator: 'merc.os',
 
