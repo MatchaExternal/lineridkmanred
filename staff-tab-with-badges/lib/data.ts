@@ -254,7 +254,7 @@ export const communityArt: CommunityArt[] = [
   {
     src: "/gallery/i-am-king.png",
     title: "ANTI-MATERIAL MONARCH",
-    artist: "@kkurune",
+    artist: "@kurunei on discord",
     code: "ART-002",
   },
   {
