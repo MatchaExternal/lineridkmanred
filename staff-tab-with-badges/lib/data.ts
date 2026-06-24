@@ -133,7 +133,7 @@ export const weapons: Weapon[] = [
       { label: "BULLET COST", value: "100H" },
       { label: "DRAW TIME", value: "0.75s" },
       { label: "HOLSTER TIME", value: "0.65s" },
-      { label: "MAGAZINE", value: "4 bullets" },
+      { label: "MAGAZINE", value: "3 bullets" },
     ],
     notes: [
       "Best mobility profile in the set — one-handed guns can be used while wallrunning and using augment.",
@@ -204,7 +204,7 @@ export const weapons: Weapon[] = [
       { label: "DAMAGE", value: "140" },
       { label: "BULLET COST", value: "200H" },
       { label: "DRAW TIME", value: "1.85s" },
-      { label: "MAGAZINE", value: "1" },
+      { label: "MAGAZINE", value: "1 bullet" },
     ],
     notes: [
       "A two-handed scoped rifle built for long-range engagements.",
