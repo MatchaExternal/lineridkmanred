@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: 'REDLINER // MERC.OS',
   description:
     'REDLINER — Professional Mercenary Operations. Classified community terminal for the REDLINER tactical combat experience. Compete. Survive. Dominate.',
-  generator: 'v0.app',
+  generator: 'merc.os',
   keywords: ['REDLINER', 'Roblox', 'mercenary', 'MERC.OS', 'leaderboards', 'arsenal'],
   openGraph: {
     title: 'REDLINER // MERC.OS',
