@@ -318,6 +318,16 @@ export const staff: StaffMember[] = [
     accent: "oklch(0.72 0.07 240)", // light
   },
   {
+    username: "🍐Crazy Pear🍐",
+    role: "helpliner",
+    clearance: "ADMIN // ROOT",
+    bio: "waiting for his quote",
+    active: true,
+    avatar: "/staff/crazypear.png",
+    robloxId: 12946313,
+    accent: "oklch(0.72 0.07 155)", // sage green
+  },
+  {
     username: "earmuffs",
     role: "helpliner",
     clearance: "ADMIN // ROOT",
