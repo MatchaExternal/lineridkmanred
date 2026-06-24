@@ -90,7 +90,6 @@ export type Weapon = {
     | "ELITE"
     | "CLASSIFIED"
     | "SIGNATURE"
-    | "EIGHT_MILLION_YEN"
   image: string
   tags: string[]
   specs: { label: string; value: string }[]
@@ -197,8 +196,8 @@ export const weapons: Weapon[] = [
     name: "MONARCH",
     classification: "Long-Range Scoped Rifle",
     category: "Primary",
-    price: null,
-    rarity: "EIGHT_MILLION_YEN",
+    price: 8000000,
+    rarity: "CLASSIFIED",
     image: "/weapons/monarch.png",
     tags: ["Two-handed", "Scoped", "Long-range"],
     specs: [
