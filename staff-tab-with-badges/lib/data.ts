@@ -321,10 +321,10 @@ export const staff: StaffMember[] = [
     username: "🍐Crazy Pear🍐",
     role: "helpliner",
     clearance: "ADMIN // ROOT",
-    bio: "waiting for his quote",
+    bio: "“You’re only living if you’re living in service of other lives.”",
     active: true,
     avatar: "/staff/crazypear.png",
-    robloxId: 12946313,
+    robloxId: 907424331,
     accent: "oklch(0.72 0.07 155)", // sage green
   },
   {
