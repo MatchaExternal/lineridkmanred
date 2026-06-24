@@ -1,19 +1,3 @@
-import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
-import { Geist_Mono, Anton } from 'next/font/google'
-import './globals.css'
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
-
-const display = Anton({
-  variable: '--font-display',
-  weight: '400',
-  subsets: ['latin'],
-})
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://redliner.online'),
 
@@ -64,30 +48,4 @@ export const metadata: Metadata = {
       'Professional Mercenary Operations. Compete. Survive. Dominate.',
     images: ['https://redliner.online/mercos.png'],
   },
-}
-
-export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#000000',
-  userScalable: false,
-  width: 'device-width',
-  initialScale: 1,
-}
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`dark ${geistMono.variable} ${display.variable} bg-background`}
-    >
-      <body>
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
-    </html>
-  )
 }
