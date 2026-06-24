@@ -39,6 +39,77 @@ const MISTAKES = [
   "Throwing out slam and forgetting it can be parried right back.",
 ]
 
+type Weapon = {
+  name: string
+  role: string
+  tags: string[]
+  values: { field: string; value: string }[]
+  notes: { label: string; lines: string[] }
+}
+
+const WEAPONS: Weapon[] = [
+  {
+    name: "CASTIGATE",
+    role: "The most mobility-friendly gun in the current set — one-handed guns can be fired while wallrunning and using augment.",
+    tags: ["One-handed", "Lifesteal", "Scan-aim"],
+    values: [
+      { field: "Damage", value: "60" },
+      { field: "Bullet cost", value: "100H" },
+      { field: "Draw time", value: "0.75s" },
+      { field: "Holster time", value: "0.65s" },
+      { field: "Magazine", value: "4 bullets" },
+    ],
+    notes: {
+      label: "NOTES",
+      lines: [
+        "A reticle appears over players while aiming.",
+        "Tracking within the reticle confirms a shot from any distance.",
+        "Each landed shot heals 20 health.",
+        "Tracked shots can still connect if the target moves behind a wall.",
+      ],
+    },
+  },
+  {
+    name: "PHOENIX",
+    role: "A high-threat two-handed explosive projectile. It can instantly kill on direct projectile contact, while the blast radius deals 80 damage.",
+    tags: ["Explosive", "Projectile", "Two-handed"],
+    values: [
+      { field: "Damage", value: "80 / direct-hit insta-kill" },
+      { field: "Bullet cost", value: "120H" },
+      { field: "Draw time", value: "0.75s" },
+      { field: "Holster time", value: "0.75s" },
+      { field: "Magazine", value: "2 bullets" },
+    ],
+    notes: {
+      label: "PARRY RISK",
+      lines: [
+        "Instability received from parrying Phoenix bypasses the Instability limiter and can cause destabilization.",
+        "Treat it differently from most gun parries — the trade is not free.",
+      ],
+    },
+  },
+  {
+    name: "SIEGE",
+    role: "A two-handed close-range spread weapon. It creates burst and recoil mix-up pressure that is strongest up close and falls off with distance.",
+    tags: ["Spread", "Two-shot", "Two-handed"],
+    values: [
+      { field: "Damage", value: "30–70 per shot" },
+      { field: "Bullet cost", value: "120" },
+      { field: "Draw time", value: "1.1s" },
+      { field: "Holster time", value: "0.6s" },
+      { field: "Magazine", value: "2 bullets" },
+      { field: "Shot interval", value: "0.75s" },
+    ],
+    notes: {
+      label: "LIMITS",
+      lines: [
+        "Pellets do not penetrate walls.",
+        "Siege has the slowest draw time in the current weapon set.",
+      ],
+    },
+  },
+]
+
 function ComingSoon({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <div className="flex flex-col items-center justify-center gap-4 border border-dashed border-border bg-card py-24 text-center">
@@ -145,6 +216,75 @@ function FieldManual() {
   )
 }
 
+function Weapons() {
+  return (
+    <div className="space-y-6">
+      {WEAPONS.map((w) => (
+        <div key={w.name} className="border border-border bg-card">
+          {/* header bar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-secondary/40 px-5 py-3">
+            <div className="flex items-center gap-2">
+              <Crosshair className="h-4 w-4 text-amber" />
+              <span className="font-display text-xl tracking-wide text-foreground">{w.name}</span>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {w.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="border border-amber/50 px-2 py-0.5 font-mono text-[10px] tracking-widest text-amber"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid gap-6 p-5 lg:grid-cols-2">
+            {/* values table */}
+            <div>
+              <div className="font-mono text-[10px] tracking-widest text-muted-foreground">VALUES</div>
+              <div className="mt-3 divide-y divide-border/60">
+                {w.values.map((v) => (
+                  <div key={v.field} className="flex items-center justify-between gap-4 py-2">
+                    <span className="font-mono text-[12px] text-muted-foreground">{v.field}</span>
+                    <span className="text-right font-mono text-[13px] text-foreground/90">{v.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* role + notes */}
+            <div className="space-y-4">
+              <div>
+                <div className="font-mono text-[10px] tracking-widest text-muted-foreground">COMBAT ROLE</div>
+                <p className="mt-3 font-mono text-[13px] leading-relaxed text-foreground/90">{w.role}</p>
+              </div>
+              <div className="border-l-2 border-amber/60 bg-secondary/40 px-3 py-2.5">
+                <div className="font-mono text-[10px] tracking-widest text-amber">{w.notes.label}</div>
+                <ul className="mt-2 space-y-1.5">
+                  {w.notes.lines.map((line) => (
+                    <li
+                      key={line}
+                      className="flex gap-2 font-mono text-[12px] leading-relaxed text-muted-foreground"
+                    >
+                      <span className="text-amber">{"›"}</span>
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <p className="font-mono text-[10px] leading-relaxed tracking-widest text-muted-foreground/70">
+        {"// SOURCE: TRELLOLINER SNAPSHOT. VALUES SUBJECT TO BALANCE PATCHES."}
+      </p>
+    </div>
+  )
+}
+
 export function Guide() {
   const [active, setActive] = useState<GuideTab>("field-manual")
 
@@ -190,7 +330,7 @@ export function Guide() {
         transition={{ duration: 0.3 }}
       >
         {active === "field-manual" && <FieldManual />}
-        {active === "weapons" && <ComingSoon icon={<Crosshair className="h-6 w-6" />} label="Weapons" />}
+        {active === "weapons" && <Weapons />}
         {active === "techs" && <ComingSoon icon={<Zap className="h-6 w-6" />} label="Techs" />}
       </motion.div>
     </section>
