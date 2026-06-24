@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: 'REDLINER // MERC.OS',
 
   description:
-    'MERC.OS | Mercenary Engagement & Reconnaissance Command Operating System',
+    'MERC.OS | Mercenary Engagement & Reconnaissance Command Operating System.',
 
   generator: 'merc.os',
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'REDLINER // MERC.OS',
     description:
-      'Professional Mercenary Operations. Compete. Survive. Dominate.',
+      'MERC.OS | Mercenary Engagement & Reconnaissance Command Operating System.',
     url: 'https://redliner.online',
     siteName: 'REDLINER // MERC.OS',
     type: 'website',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'REDLINER // MERC.OS',
     description:
-      'Professional Mercenary Operations. Compete. Survive. Dominate.',
+      'MERC.OS | Mercenary Engagement & Reconnaissance Command Operating System.',
     images: ['https://redliner.online/mercos.png'],
   },
 }
