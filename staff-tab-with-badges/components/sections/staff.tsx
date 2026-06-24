@@ -10,6 +10,17 @@ import { staff, honorableMentions, type StaffRole, type StaffMember } from "@/li
 
 // Helpliner's signature color: sage green, set apart from the program's red/amber palette.
 const SAGE = "oklch(0.72 0.07 155)"
+const SKY = "oklch(0.72 0.07 240)"
+const PURPLE = "oklch(0.72 0.11 300)"
+const AMBER = "oklch(0.78 0.12 85)"
+const CRIMSON = "oklch(0.68 0.14 25)"
+const CYAN = "oklch(0.75 0.10 220)"
+const TEAL = "oklch(0.72 0.09 190)"
+const LIME = "oklch(0.78 0.11 135)"
+const ROSE = "oklch(0.74 0.12 355)"
+const ORANGE = "oklch(0.76 0.13 55)"
+const STEEL = "oklch(0.70 0.03 250)"
+const GOLD = "oklch(0.82 0.11 95)"
 
 // Each role gets a distinct badge: its own icon, label, hover tooltip and color.
 type RoleConfig = {
@@ -24,7 +35,7 @@ const ROLES: Record<StaffRole, RoleConfig> = {
     label: "HELPLINER",
     tooltip: "Helpliner",
     icon: <ShieldCheck className="h-3 w-3" />,
-    color: SAGE,
+    color: CYAN,
   },
   moderator: {
     label: "MODERATOR",
@@ -48,7 +59,7 @@ const ROLES: Record<StaffRole, RoleConfig> = {
   label: "EVENT COORDINATOR",
   tooltip: "Event Coordinator",
   icon: <ShieldCheck className="h-3 w-3" />,
-  color: "oklch(0.72 0.11 300)", // purple
+  color: PURPLE, // purple
 },
 }
 
